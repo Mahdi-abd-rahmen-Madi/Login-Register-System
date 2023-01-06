@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add some style to center the form on the page */
+    .registration-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Style the form itself */
+    form {
+      width: 60%;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    /* Style the form elements */
+    input,
+    button {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      border-radius: 4px;
+    }
+
+    /* Style the submit button */
+    button[type="submit"] {
+      background-color: #797575;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Wrap the form in a div with a class of "registration-form" -->
+  <div class="registration-form">
+    <!-- Create the form -->
+    <form>
+      <!-- Add some form elements -->
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</body>
+</html>
