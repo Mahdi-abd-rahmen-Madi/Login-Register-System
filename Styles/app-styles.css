@@ -1,0 +1,39 @@
+:root {
+  --gold-c: #FFE898;
+  --red-c:#F65A83;
+  --subtitle-c:#F7ECDE;
+  --bg-c:rgb(20, 30, 40);
+  --hover-blue:#1b9bff;
+  --text-c:linen;
+  --hover-c:rgba(233,40,201,0.8);
+  --visited-c: rgb(233, 40, 201);
+  --grad-1:linear-gradient(135deg, #FDE7EA,#FDEFDA);
+  --grad-2:linear-gradient(135deg, #F9E7FE,#DAFCFC);
+}
+
+
+.menu li a.login-button {
+    background-color: lightgreen;
+    color: white;
+    padding: 0.5em 0.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  .menu li a.login-button:hover {
+    background-color: green;
+  }
+  .menu li a.register-button {
+    background-color: lightskyblue;
+    color: white;
+    padding: 0.5em 0.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  .menu li a.register-button:hover {
+    background-color: var(--hover-blue);
+  }
+  .menu li {
+    margin-right: 2em;
+  }
