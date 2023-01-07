@@ -1,0 +1,198 @@
+:root {
+  --gold-c: #FFE898;
+  --red-c:#F65A83;
+  --subtitle-c:#F7ECDE;
+  --bg-c:rgb(20, 30, 40);
+  --hover-blue:#1b9bff;
+  --violet-c:#8A2EFF;
+  --lviolet-c:#B85EFF;
+  --text-c:linen;
+  --hover-c:rgba(233,40,201,0.8);
+  --visited-c: rgb(233, 40, 201);
+  --grad-1:linear-gradient(135deg, #FDE7EA,#FDEFDA);
+  --grad-2:linear-gradient(135deg, #F9E7FE,#DAFCFC);
+
+}
+
+/* ========= basic ========= */
+html {
+  min-width: 380px;
+  scroll-behavior: smooth;
+}
+
+*,::before,::after {
+  padding:0 ;
+  margin:0;
+  box-sizing: border-box;
+  font-size: 1rem;  
+} 
+body {
+  font-family: 'Baskervville', serif;
+  color :var(--text-c);
+  background:var(--bg-c);
+  width:100%;
+  height:100%;
+  overflow-x: hidden;
+  overflow-y:hidden;
+}
+main {
+  border: none;
+  box-sizing: border-box;
+  display: flex ;
+  flex-direction:column;
+}
+
+section {
+  display:flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+  min-height:80vh;
+  padding:10%;
+  margin: 0% auto;
+  align-items: center;
+}
+
+/* ========== Text Styles ========== */
+h1 {
+  font-family: 'Anton', sans-serif;
+  text-align:left;
+}
+h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  text-align:left;
+  padding-bottom:5%;
+}
+a {text-decoration: none;color: linen;font-size:1.2rem;}
+p {font-size:1.2rem;text-align:left;color:linen;}
+.title {
+  color:var(--gold-c);
+  font-size: 3rem;
+}
+.title-red {
+  color:var(--red-c);
+  font-size: 3.5rem;
+  transition: all 0.2s ease-in-out;
+  
+}
+.title-red:hover {
+  font-size:4.2rem;
+}
+/* ========== End Text Styles ========== */ 
+
+/* ========== Sign Up Custom Section ========== */
+
+form { 
+  width :100%;
+  min-width: 300px;
+  padding:0%;
+  margin:0%  ;    
+}
+
+form .txt_field {
+  position : relative; 
+  border-bottom: 2px solid #adadad;
+  margin: 50px 0; 
+}
+
+.txt_field input {
+  width: 100%; 
+  padding: 0 5px ;
+  height : 30px ; /* height must be same value as top of the span::before */
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label {
+  position: absolute;
+  top :50%;
+  left: 5px;
+  color:#adadad;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.txt_field span::before {
+  content: "";
+  position: absolute;
+  top:30px; /* top value should be the same as height value for the input*/
+  left:0; 
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: 0.5s; 
+}
+
+
+.txt_field ::-webkit-input-placeholder {opacity:0;}
+.txt_field::-webkit-input-placeholder:active {opacity:1;}
+
+.txt_field input:focus ~ label,	
+.txt_field input:valid ~ label {
+  top: -5px;
+
+  color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,	
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+form legend { 
+  font-size : 2rem ; 
+  font-weight : bold ; 
+  padding-top:10%;
+  text-align : left; 
+  color : #fff ; 
+}
+form label { 
+  font-size : 1rem ; 
+  font-weight : 500 ;
+  color : #fff ; 
+}
+
+form input [type="checkbox"]{text-align: center;}
+form input[type="submit"] {
+  width : 100% ;
+  height:40px; 
+  border : 3px solid var(--bg-c) ;
+  background: #2691d9;
+  border-radius :25px;
+  font-size: 1.3rem;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor:pointer;
+  outline:none;
+}
+
+
+form input[type="submit"]:hover {
+  border-color: #2691d9;
+  transition: 0.5s ease-in;
+}
+.sign_up_link {margin: 8px 0;}
+.sign_in_link{
+  margin:10px 0 ;
+  text-align:center;
+  font-size: 1rem;
+  color:#666666;
+}
+.sign_in_link a{
+  color:var(--gold-c) ;
+  text-decoration:none;
+}
+.sign_in_link a:hover{
+  text-decoration:underline;
+}
+/* Terms and conditions */
+fieldset a {color:var(--gold-c);font-size:1rem;font-weight:700;}
+form a:hover{background:none;color:var(--hover-c);transition : 0.3s ease;}
+form a:visited { color:var(--visited-c); }
+fieldset{border: none;width: inherit;color:white}
+
+/* ========== End Custom Sections ========== */
+
+
